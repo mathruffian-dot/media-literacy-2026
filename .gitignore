@@ -2,12 +2,36 @@
 desktop.ini
 *.tmp
 ~$*
+.DS_Store
 
-# 敏感資料
+# 敏感資料（.env.example 保留）
 .env
+!.env.example
 *.key
 credentials.*
+*.pem
 
-# 大型二進位檔（選擇性排除）
-# *.mp4
-# *.zip
+# API 金鑰檔 — 公開 repo，絕不進 git
+groq_api_key.txt
+*api_key*
+*apikey*
+*_token.txt
+*.pat
+
+# Python（技能腳本產生）
+__pycache__/
+*.pyc
+*.pyo
+
+# 影片/音訊原始素材與成品（太大，不進 git）
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.wav
+*.mp3
+*.m4a
+
+# 圖片暫存
+generated/
